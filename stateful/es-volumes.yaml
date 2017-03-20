@@ -1,0 +1,57 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: storage-es-data-0
+  namespace: "default"
+  annotations:
+    volume.beta.kubernetes.io/storage-class: default
+  labels:
+    type: nfs
+spec:
+  capacity:
+    storage: 20Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Recycle
+  nfs:
+    path: /share/es-data-0
+    server: d-gp2-kubenfs3-1.imovetv.com
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: storage-es-data-1
+  namespace: "default"
+  annotations:
+    volume.beta.kubernetes.io/storage-class: default
+  labels:
+    type: nfs
+spec:
+  capacity:
+    storage: 20Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Recycle
+  nfs:
+    path: /share/es-data-1
+    server: d-gp2-kubenfs3-1.imovetv.com
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: storage-es-data-2
+  namespace: "default"
+  annotations:
+    volume.beta.kubernetes.io/storage-class: default
+  labels:
+    type: nfs
+spec:
+  capacity:
+    storage: 20Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Recycle
+  nfs:
+    path: /share/es-data-2
+    server: d-gp2-kubenfs3-1.imovetv.com
+---

@@ -14,7 +14,7 @@ spec:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Recycle
   nfs:
-    path: /share/es-data-0
+    path: /share/jenkins/es-data-0
     server: d-gp2-kubenfs3-1.imovetv.com
 ---
 apiVersion: v1
@@ -33,7 +33,7 @@ spec:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Recycle
   nfs:
-    path: /share/es-data-1
+    path: /share/jenkins/es-data-1
     server: d-gp2-kubenfs3-1.imovetv.com
 ---
 apiVersion: v1
@@ -52,6 +52,6 @@ spec:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Recycle
   nfs:
-    path: /share/es-data-2
+    path: /share/jenkins/es-data-2
     server: d-gp2-kubenfs3-1.imovetv.com
 ---
